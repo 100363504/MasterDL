@@ -26,13 +26,11 @@ Topic Modeling con datos de ArXiv
    El siguiente paso a realizar es el preprocesamiento de los datos cargados, puesto que estos han sido volcados al código sin ningún tipo preprocesamiento, lo que puede dificultar mucho el procesamiento por el modelo. Este preprocesamiento trata de limpiar y preparar el texto, lo que puede incluir eliminar palabras vacías, realizar lematización o stemming, eliminar puntuaciones y caracteres especiales, etc.
 
    	Se han utilizado varias técnicas de preprocesamiento:
-	1. Tokenización: Se divide cada documento en palabras o tokens 			individuales.
-    
-	2. Eliminación de palabras vacías (stop words): Se eliminan las 		palabras comunes que no aportan un significado importante al 			análisis del texto, como artículos, conjunciones, etc.
-    
- 	3.  Normalización de texto: Se convierten todas las palabras a 			minúsculas y se eliminan caracteres especiales.
-     
-  	4. Lematización: Se reducen las palabras a su lema. 
+
+	1. Tokenización: Se divide cada documento en palabras o tokens individuales.
+	2. Eliminación de palabras vacías (stop words): Se eliminan las palabras comunes que no aportan un significado importante al análisis del texto, como artículos, conjunciones, etc.
+	3.  Normalización de texto: Se convierten todas las palabras a minúsculas y se eliminan caracteres especiales.
+	4.  Lematización: Se reducen las palabras a su lema. 
 
 	Ya que el ordenador no es muy potente se ha optado por el preprocesamiento más complejo, es decir, se han usado todas las técnicas mencionadas anteriormente para que los datos puedan ser modelados con más facilidad.
 
@@ -44,11 +42,8 @@ Ahora que el texto está listo, se pasa a la construcción del modelo, analizar 
 Los resultados se dividen en 1032 líneas, cada una de ellas contiene un tópico. En cada línea podemos observar:
 
 	1. Nombre del tópico: se trata de la palabra clave o frase que resume el contenido de los artículos que contiene. 
- 
- 	2. Aporta una lista de palabras clave que aparecen con frecuencia en los documentos de cada tópico.
-  
+	2. Aporta una lista de palabras clave que aparecen con frecuencia en los documentos de cada tópico.
   	3. Ejemplos de texto de texto que representan el contenido del tópico.
-   
    	4. El tamaño del tópico indica qué tópicos son más frecuentes.
     
 Observando los resultados, se trata de un total de 1032 tópicos y hay 143253 documentos. El tópico -1 se trata de los "outliers" y deberían ser ignorados. En este caso se han obtenido 78567 documentos que serían parte de los outliers, es decir,, casi la mitad de los documentos no han sido bien clasificados en un tópico. Esto evidencia que la calidad del modelo no es muy alta. Es posible que con un preprocesamiento distinto los resultados hubieran sido diferentes, pero como se ha mencionado anteriormente, no se disponía de un ordenador lo suficientemente potente como para hacer varias compilaciones de modelos diferentes.
@@ -58,9 +53,11 @@ En la siguiente imagen se observa un "pie chart" que muestra los tópicos encont
 ![image](https://github.com/100363504/MasterDL/assets/73606444/0556c7a8-9a2f-4904-9ebf-1b7998843779)
 
 En esta otra imagen se puede observar la distribución de las palabras dentro de los propios tópicos.
+
 ![image](https://github.com/100363504/MasterDL/assets/73606444/e899e1d6-578d-4f86-94a7-fd674c3c252f)
 
 Aún más, en la siguiente imagen se puede observar la distribución de los tópicos y su similitud con otros, lo que es un indicativo de la unicidad de cada tópico.
+
 ![image](https://github.com/100363504/MasterDL/assets/73606444/ae798f84-34e8-4b57-8e0d-df0ae54dee9e)
 
 
