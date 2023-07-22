@@ -17,11 +17,22 @@ Topic Modeling con datos de ArXiv
 
 	El conjunto de datos a utilizar será el Arxiv Dataset. Este se trata de un conjunto de artículos educativos, que se han ido recopilando a lo largo de 30 años y que incluyen múltiples tópicos, como puede ser matemáticas, estadística, ingeniería biología o economía. En total tiene una cantidad de unos 1.7 millones de artículos, lo cual se trata de una base datos muy extensa, lo que requiere de un buen modelo capaz de clasificarlo en tópicos para ser más accesibles para el usuario.
 
-3. Instrucciones de uso
+	En este caso el conjunto de datos se ha tenido que reducir en subconjuntos para que el ordenador sea capaz de procesarlos.
+
+4. Instrucciones de uso
 
 	El usuario deberá cargar el conjunto de datos de los que quiera extraer los tópicos. En este paso es muy importante que el usuario se familiarice con los datos que posee, para que después sea más fácil la comprensión de los resultados.
 
    El siguiente paso a realizar es el preprocesamiento de los datos cargados, puesto que estos han sido volcados al código sin ningún tipo preprocesamiento, lo que puede dificultar mucho el procesamiento por el modelo. Este preprocesamiento trata de limpiar y preparar el texto, lo que puede incluir eliminar palabras vacías, realizar lematización o stemming, eliminar puntuaciones y caracteres especiales, etc.
+
+   	Se han utilizado varias técnicas de preprocesamiento:
+	1. Tokenización: Se divide cada documento en palabras o tokens 			individuales.
+    
+	2. Eliminación de palabras vacías (stop words): Se eliminan las 		palabras comunes que no aportan un significado importante al 			análisis del texto, como artículos, conjunciones, etc.
+    
+ 	3.  Normalización de texto: Se convierten todas las palabras a 			minúsculas y se eliminan caracteres especiales.
+     
+  	4. Lematización: Se reducen las palabras a su lema. 
 
 	Ahora que el texto está listo, se pasa a la construcción del modelo, analizar e identificar la mejor forma de modelar los datos.
    
