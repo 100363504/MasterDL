@@ -34,7 +34,41 @@ Topic Modeling con datos de ArXiv
      
   	4. Lematización: Se reducen las palabras a su lema. 
 
-	Ahora que el texto está listo, se pasa a la construcción del modelo, analizar e identificar la mejor forma de modelar los datos.
+	Ya que el ordenador no es muy potente se ha optado por el preprocesamiento más complejo, es decir, se han usado todas las técnicas mencionadas anteriormente para que los datos puedan ser modelados con más facilidad.
+
+Ahora que el texto está listo, se pasa a la construcción del modelo, analizar e identificar la mejor forma de modelar los datos.
    
    
+6. Resultados
+
+Los resultados se dividen en 1032 líneas, cada una de ellas contiene un tópico. En cada línea podemos observar:
+
+	1. Nombre del tópico: se trata de la palabra clave o frase que resume el contenido de los artículos que contiene. 
+ 
+ 	2. Aporta una lista de palabras clave que aparecen con frecuencia en los documentos de cada tópico.
+  
+  	3. Ejemplos de texto de texto que representan el contenido del tópico.
+   
+   	4. El tamaño del tópico indica qué tópicos son más frecuentes.
+    
+Observando los resultados, se trata de un total de 1032 tópicos y hay 143253 documentos. El tópico -1 se trata de los "outliers" y deberían ser ignorados. En este caso se han obtenido 78567 documentos que serían parte de los outliers, es decir,, casi la mitad de los documentos no han sido bien clasificados en un tópico. Esto evidencia que la calidad del modelo no es muy alta. Es posible que con un preprocesamiento distinto los resultados hubieran sido diferentes, pero como se ha mencionado anteriormente, no se disponía de un ordenador lo suficientemente potente como para hacer varias compilaciones de modelos diferentes.
+
+En la siguiente imagen se observa un "pie chart" que muestra los tópicos encontrados más frecuentes con su porcentaje dentro del total. Se puede ver que la mayoría de los documentos incluídos en la base de datos tratan del grafeno.
+
+![image](https://github.com/100363504/MasterDL/assets/73606444/0556c7a8-9a2f-4904-9ebf-1b7998843779)
+
+En esta otra imagen se puede observar la distribución de las palabras dentro de los propios tópicos.
+![image](https://github.com/100363504/MasterDL/assets/73606444/e899e1d6-578d-4f86-94a7-fd674c3c252f)
+
+Aún más, en la siguiente imagen se puede observar la distribución de los tópicos y su similitud con otros, lo que es un indicativo de la unicidad de cada tópico.
+![image](https://github.com/100363504/MasterDL/assets/73606444/ae798f84-34e8-4b57-8e0d-df0ae54dee9e)
+
+
+
+7. Referencias
+
+[1] M. Grootendorst, «BERTopic: Neural topic modeling with a class-based TF-IDF procedure,» arXiv preprint arXiv:2203.05794, 2022.
+[2] MAARTEN. 2021. "Topic Modeling arXiv Abstract with BERTopic." Kaggle. Disponible en: [URL (https://www.kaggle.com/code/maartengr/topic-modeling-arxiv-abstract-with-bertopic)]
+[3] N. Reimers e I. Gurevych, Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks, 2019. arXiv: 1908.10084 [cs.CL].
+
    
